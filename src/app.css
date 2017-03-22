@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Segoe';
+    src: url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.gif?r=38546320820');
+    src: url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.gif?r=38546320820?#iefix') format('embedded-opentype'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.bmp?r=38546320820') format('woff'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.jpg?r=38546320820') format('truetype'), url('//cdn.webfont.youziku.com/webfonts/nomal/99006/46749/58d1ed10f629d81b7cd03461.png#SegoeWP') format('svg');
+}
+
+
+html {
+    font-size: 62.5%;
+}
+*{
+    font-family: Segoe, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.btn {
+    border-radius: 0;
+}
+
+
+.table td {
+    vertical-align: middle !important;
+    font-size: 1.7rem;
+    font-weight: 100;
+    border-top: 0 !important;
+    color: #636363;
+    padding-top: 40px !important;
+    border-bottom: 2px solid #eee;
+    transition-duration: 1s;
+}
+
+.table tr:hover td {
+    border-bottom: 2px solid #990033;
+}
+
+body {
+    padding-bottom: 500px;
+}
+
+.table .del{
+    color: #990033;
+    font-size: 1.1rem;
+    float: right;
+    transition-duration: .5s;
+}
+
+.table .del:hover {
+    color: #CC0033;
+    text-shadow: 0 0 1px #ddd;
+}
+
+.navbar-hosts{
+    background-color: #fff;
+    box-shadow: 0 0 10px #e8e8e8;
+}
+
+.navbar-hosts input{
+    border-radius: 0 !important;
+    margin-right: 15px;
+}
+
+.navbar-hosts .navbar-brand{
+    font-size: 2rem;
+    transition-duration: .5s;
+    color: #422099;
+    font-weight: bold;
+}
+
+.navbar-hosts .navbar-brand:hover {
+    color: #CC0033;
+    text-shadow: 0 0 1px #ddd;
+}
+
+.navbar-hosts .navbar-form{
+    padding-left: 0;
+}

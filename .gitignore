@@ -1,0 +1,15 @@
+node_modules
+dist
+reports
+.tmp
+.svn
+.grunt
+.sass-cache
+app/bower_components
+.DS_Store
+*.iml
+*.ipr
+*.iws
+*.xml
+.idea/
+build
