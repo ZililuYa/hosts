@@ -28,8 +28,13 @@ var vm = avalon.define({
 
         var mainData = listData.join('\n');
         mainData = mainData.replace(/\,/g, '\t');
-        $.post('/hosts', {mainData: mainData}, function (data) {
+        $.post('/setHosts', {mainData: mainData}, function (data) {
+            if (data == "200") {
+                vm.dataArr.ip = '';
+                vm.dataArr.dn = '';
+            } else {
 
+            }
         });
     },
     deleteClick: function (i) {
