@@ -82,3 +82,36 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
+
+.container-hosts .alert{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border-radius: 0 !important;
+    padding: 10px 20px 10px 20px;
+    transform:scale(0.1,0.1);
+    opacity: 0;
+    transition-duration: .3s;
+}
+.container-hosts .alert.show{
+    transform:scale(1,1);
+    opacity: 1;
+}
+
+.container-hosts .logo{
+    font-size: 1.2rem;
+    color: #636363;
+    position: relative;
+}
+
+.container-hosts .logo:before{
+    position: absolute;
+    right: 50%;
+    margin-right: -43.43px;
+    top: 200px;
+    content: "HOSTS CHANGE";
+}
+
+.container-hosts .navbar-toggle .icon-bar{
+    background-color: #990033;
+}

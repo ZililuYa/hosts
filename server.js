@@ -43,7 +43,6 @@ app.get('/hosts',function (req, res) {
     });
 });
 app.post('/setHosts', function (req, res) {
-    console.log(req.body.mainData);
     fs.writeFile(ho, req.body.mainData, 'utf-8', function (err) {
         if (err) {
             res.send("500");

@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "node server.js"
+  },
   "dependencies": {
     "avalon2": "^2.2.4",
     "body-parser": "^1.17.1",
