@@ -7,5 +7,6 @@ Run Server
 $ npm run dev
 ```
 
-Style
+>Style
+
 ![](http://i4.buimg.com/567571/5fe1ce61e760ce79.jpg)
