@@ -31,10 +31,16 @@ app.get('/home', function (req, res) {
     res.render('index');
 });
 
-var ho = 'C:\\Windows\\System32\\drivers\\etc\\hosts';
+var hosts = 'C:\\Windows\\System32\\drivers\\etc\\hosts';
+if (!fsExistsSync(hosts)) {
+    hosts = '\\etc\\hosts';
+    if (!fsExistsSync(hosts)) {
+        hosts = false;
+    }
+}
 
-app.get('/hosts',function (req, res) {
-    fs.readFile(ho, 'utf-8', function (err, data) {
+app.get('/hosts', function (req, res) {
+    fs.readFile(hosts, 'utf-8', function (err, data) {
         if (err) {
             throw err;
         } else {
@@ -43,15 +49,28 @@ app.get('/hosts',function (req, res) {
     });
 });
 app.post('/setHosts', function (req, res) {
-    fs.writeFile(ho, req.body.mainData, 'utf-8', function (err) {
+    fs.writeFile(hosts, req.body.mainData, 'utf-8', function (err) {
         if (err) {
             res.send("500");
-        }else{
+        } else {
             res.send("200");
         }
     });
 });
 
-server = app.listen(2017, function () {
-    c.exec('start http://localhost:2017');
-});
+if (hosts) {
+    app.listen(2017, function () {
+        c.exec('start http://localhost:2017');
+    });
+} else {
+    console.error('hosts path error');
+}
+
+function fsExistsSync(path) {
+    try {
+        fs.accessSync(path, fs.F_OK);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
