@@ -33,7 +33,7 @@ app.get('/home', function (req, res) {
 
 var hosts = 'C:\\Windows\\System32\\drivers\\etc\\hosts';
 if (!fsExistsSync(hosts)) {
-    hosts = '\\etc\\hosts';
+    hosts = '/etc/hosts';
     if (!fsExistsSync(hosts)) {
         hosts = false;
     }
